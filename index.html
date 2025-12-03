@@ -1,0 +1,93 @@
+<!DOCTYPE html>  
+<html lang="fr">  
+<head>  
+    <meta charset="UTF-8">  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+    <title>Anime-Stock - Streaming VF & VOSTFR</title>  
+    <link rel="stylesheet" href="css/style.css">  
+</head>  
+<body>  
+    <!-- Header -->  
+    <header>  
+        <nav>  
+            <a href="index.html" class="logo">🎌 Anime-Stock</a>  
+              
+            <div class="nav-controls">  
+                <div class="search-bar">  
+                    <input type="text" placeholder="Rechercher un anime..." id="searchInput">  
+                    <span class="search-icon">🔍</span>  
+                </div>  
+                <button class="theme-btn" onclick="toggleTheme()" id="themeIcon" title="Changer le thème">🌙</button>  
+                <button class="menu-toggle" onclick="toggleMenu()">☰</button>  
+            </div>  
+  
+            <ul class="nav-links" id="navLinks">  
+                <li><a href="index.html">Accueil</a></li>  
+                <li><a href="#" onclick="filterCategory('all', this); return false;">Catalogue</a></li>  
+                <li><a href="#" onclick="filterCategory('nouveaute', this); return false;">Nouveautés</a></li>  
+                <li><a href="#" onclick="filterCategory('vf', this); return false;">Version VF</a></li>  
+            </ul>  
+        </nav>  
+    </header>  
+  
+    <!-- Contenu Principal -->  
+    <main class="container">  
+          
+        <!-- Filtres -->  
+        <div class="categories">  
+            <button class="category-btn active" onclick="filterCategory('all', this)">Tout</button>  
+            <button class="category-btn" onclick="filterCategory('action', this)">Action</button>  
+            <button class="category-btn" onclick="filterCategory('aventure', this)">Aventure</button>  
+            <button class="category-btn" onclick="filterCategory('comedie', this)">Comédie</button>  
+            <button class="category-btn" onclick="filterCategory('drame', this)">Drame</button>  
+            <button class="category-btn" onclick="filterCategory('shonen', this)">Shōnen</button>  
+        </div>  
+  
+        <h2 class="section-title">Liste des Animes</h2>  
+          
+        <!-- Grille des animes (Générée par JS) -->  
+        <div class="anime-grid" id="animeGrid">  
+            <!-- Le contenu sera injecté ici -->  
+        </div>  
+  
+        <!-- Pagination -->  
+        <div class="pagination">  
+            <button class="page-btn" id="prevBtn" onclick="changePage(-1)">Précédent</button>  
+            <span id="pageIndicator">Page 1</span>  
+            <button class="page-btn" id="nextBtn" onclick="changePage(1)">Suivant</button>  
+        </div>  
+    </main>  
+  
+    <!-- Footer -->  
+    <footer>  
+        <div class="footer-content">  
+            <div class="footer-section">  
+                <h3>Anime-Stock</h3>  
+                <p>La référence du streaming anime gratuit en France.</p>  
+            </div>  
+            <div class="footer-section">  
+                <h3>Liens</h3>  
+                <ul>  
+                    <li><a href="index.html">Accueil</a></li>  
+                    <li><a href="#">Demander un anime</a></li>  
+                    <li><a href="#">Planning</a></li>  
+                </ul>  
+            </div>  
+            <div class="footer-section">  
+                <h3>Légal</h3>  
+                <ul>  
+                    <li><a href="#">Mentions légales</a></li>  
+                    <li><a href="#">DMCA</a></li>  
+                </ul>  
+            </div>  
+        </div>  
+        <div class="footer-bottom">  
+            &copy; 2025 Anime-Stock. Tous droits réservés.  
+        </div>  
+    </footer>  
+  
+    <!-- Scripts -->  
+    <script src="js/data.js"></script>  
+    <script src="js/script.js"></script>  
+</body>  
+</html>

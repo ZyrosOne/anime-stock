@@ -1,0 +1,39 @@
+<!DOCTYPE html>  
+<html lang="fr">  
+<head>  
+    <meta charset="UTF-8">  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+    <title>Détails Anime - Anime-Stock</title>  
+    <link rel="stylesheet" href="css/style.css">  
+</head>  
+<body>  
+    <header>  
+        <nav>  
+            <a href="index.html" class="logo">🎌 Anime-Stock</a>  
+            <div class="nav-controls">  
+                <button class="theme-btn" onclick="toggleTheme()" id="themeIcon">🌙</button>  
+            </div>  
+        </nav>  
+    </header>  
+  
+    <main class="container">  
+        <a href="index.html" class="btn-back">← Retour au catalogue</a>  
+          
+        <div id="animeDetails">  
+            <!-- Les détails seront injectés ici par JS -->  
+        </div>  
+  
+        <h3 class="section-title" style="margin-top: 3rem;">Recommandations similaires</h3>  
+        <div class="anime-grid" id="recommendationsGrid"></div>  
+    </main>  
+  
+    <footer>  
+        <div class="footer-bottom">  
+            &copy; 2025 Anime-Stock.  
+        </div>  
+    </footer>  
+  
+    <script src="js/data.js"></script>  
+    <script src="js/details.js"></script>  
+</body>  
+</html>
